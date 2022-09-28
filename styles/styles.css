@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@1,500&display=swap');
+
+
+
+:root {
+
+    --White: hsl(0, 0%, 98%);
+    --Gray: hsl(0, 0%, 41%);
+    --Black: hsl(0, 0%, 8%);
+
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    background-color: var(--White);
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 2rem;
+    height: 10vh;
+}
+
+
+.logo, .menu, .buttons{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.menu {
+    position: relative;
+    
+}
+.menu span {
+    margin: auto 1rem;
+    color: var(--Gray);
+    cursor: pointer;
+}
+
+.menu span:hover, .menu a:hover, .buttons span:hover{
+    color: var(--Black);
+}
+
+.buttons button:hover {
+    color: var(--Black);
+    border: 2px solid var(--Black);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--Gray);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+.buttons span {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    color: var(--Gray);
+}
+
+.buttons button {
+    border: 2px solid var(--Gray);
+    padding: 0.7rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--White);
+    cursor: pointer;
+    color: var(--Gray);
+}
+
+
+
+.myDropdown{
+    display: none;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+    top: 4rem;
+    
+}
+
+.myDropDown-active {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+    top: 4rem;
+}
+
+
+
+
+.myDropdown1{
+    display: none;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 4rem;
+    left: 10rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+.myDropDown1-active {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 4rem;
+    left: 10rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+main {
+    
+    display: flex;
+    min-height: 80vh;
+    margin: auto 8rem;
+    justify-content: space-between;
+    
+}
+
+.about {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    
+    
+}
+.about h1 {
+    font-size: 5rem;
+    color: var(--Black);
+}
+
+.about p {
+    font-size: 1.25rem;
+    color: var(--Gray);
+    margin-top: 2rem;
+}
+
+.image {
+    width: 45%;
+    background-image: url(../images/image-hero-desktop.png);
+    background-size: cover;
+    
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main__button button {
+    border: 2px solid var(--Gray);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    background-color: var(--Black);
+    color: var(--White);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 5rem;
+    transition: 0.3s ease;
+}
+
+.main__button button:hover {
+    background-color: var(--White);
+    color: var(--Black);
+}
+
+.txt {
+    margin-top: 4rem;
+}
+
+footer {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--White);
+    color: var(--Gray);
+}
+
+.attribution a {
+    text-decoration: none;
+    
+}
+
+#me {
+    color: rgb(17, 178, 207);
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+    
+    .navbar {
+        margin: auto 1rem;
+        
+    }
+    
+    
+    main {
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        flex-direction: column-reverse;
+        
+        
+    }
+    .about {
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        margin-top: 0;
+    }
+
+    .about h1 {
+        
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about p {
+        text-align: center;
+    }
+
+    .image {
+        background-image: url(../images/image-hero-mobile.png);
+        min-height: 30vh;
+        min-width: 100%;
+        background-size: cover;
+        
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        min-height: 50vh;
+        min-width: 50%;
+        right: 0;
+        top: 0;
+        justify-content: space-around;
+        background-color: var(--White);
+       
+    }
+
+    .menu-active {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        min-height: 50vh;
+        min-width: 50%;
+        right: 0;
+        top: 0;
+        justify-content: space-around;
+        background-color: var(--White);
+    }
+
+    .menu span {
+        margin: 1rem auto;
+    }
+    .buttons {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 0;
+        min-height: 50vh;
+        align-items: center;
+        min-width: 50%;
+        background-color: var(--White);
+        z-index: 1;
+    }
+
+    .buttons-active {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 0;
+        min-height: 50vh;
+        align-items: center;
+        min-width: 50%;
+        background-color: var(--White);
+        
+    }
+
+    .buttons span {
+        margin-top: 1rem;
+    }
+    .buttons button {
+        margin-top: 2rem;
+    }
+    
+    footer {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+
+    #close {
+        z-index: 2;
+        cursor: pointer;
+        display: none;
+    }
+
+   #open {
+        cursor: pointer;
+
+   }
+
+   .myDropDown1-active {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 11rem;
+    left: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+}
+
+
+@media screen and (max-width: 850px) {
+
+    .navbar {
+        margin: auto 1rem;
+        
+    }
+    
+    
+    main {
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        flex-direction: column-reverse;
+        
+        
+    }
+    .about {
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        margin-top: 0;
+    }
+
+    .about h1 {
+        
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about p {
+        text-align: center;
+    }
+
+    .image {
+        background-image: url(../images/image-hero-mobile.png);
+        min-height: 30vh;
+        min-width: 100%;
+        background-size: cover;
+        
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        min-height: 50vh;
+        min-width: 50%;
+        right: 0;
+        top: 0;
+        justify-content: space-around;
+        background-color: var(--White);
+       
+    }
+
+    .menu-active {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        min-height: 50vh;
+        min-width: 50%;
+        right: 0;
+        top: 0;
+        justify-content: space-around;
+        background-color: var(--White);
+    }
+
+    .menu span {
+        margin: 1rem auto;
+    }
+    .buttons {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 0;
+        min-height: 50vh;
+        align-items: center;
+        min-width: 50%;
+        background-color: var(--White);
+        z-index: 1;
+    }
+
+    .buttons-active {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 0;
+        min-height: 50vh;
+        align-items: center;
+        min-width: 50%;
+        background-color: var(--White);
+        
+    }
+
+    .buttons span {
+        margin-top: 1rem;
+    }
+    .buttons button {
+        margin-top: 2rem;
+    }
+    
+    footer {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+
+    #close {
+        z-index: 2;
+        cursor: pointer;
+        display: none;
+    }
+
+   #open {
+        cursor: pointer;
+
+   }
+
+   .myDropDown1-active {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 11rem;
+    left: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+}    
+
+
+@media screen and (min-width: 850px) {
+    .hamburger-menu {
+        display: none;
+    }
+    
+   
+
+    
+}    
